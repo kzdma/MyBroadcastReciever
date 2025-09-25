@@ -5,6 +5,7 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using MyBroadcastReciever.BroadCast;
 using Android.Content;
+using Android.Util;
 
 namespace MyBroadcastReciever
 {
@@ -23,6 +24,8 @@ namespace MyBroadcastReciever
 
             tv = FindViewById<TextView>(Resource.Id.tvHeadsetState);
             brHeadSet = new BroadCastHeadSets(tv);
+
+            Log.Debug("MYAPP", "MainActivity OnCreate");
         }
 
         protected override void OnResume()
