@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 	
 	<TextView
 		android:layout_width="match_parent"
@@ -12,5 +13,83 @@
 		android:textSize="25dp"
 		android:textColor="@android:color/holo_red_dark"
 		android:id="@+id/tvHeadsetState"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="15dp"
+		android:text="Broadcast Receiver: SMS send/receive"
+		android:gravity="center"
+		android:textColor="@android:color/holo_blue_dark"
+		android:textSize="20dp"
+		android:layout_marginTop="10dp"
+		/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="20dp">
+		
+		<Button
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:text="Register"
+			android:background="#b3b3b3"
+			android:id="@+id/btnRegister"
+			android:layout_marginLeft="35dp"/>
+
+		<Button
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:text="UnRegister"
+			android:background="#cccccc"
+			android:textColor="#ffffff"
+			android:id="@+id/btnUnRegister"
+			android:layout_marginLeft="10dp"/>
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="SMS received:"
+		android:layout_marginLeft="35dp"
+		android:textColor="@android:color/holo_blue_dark"
+		android:textSize="20dp"
+		android:layout_marginTop="10dp"/>
+
+		<TextView
+			android:layout_width="310dp"
+			android:layout_height="80dp"
+			android:hint="SMS content:"
+			android:textColor="#ac7339"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="35dp"
+			android:id="@+id/tvInSMSText"/>
+
+	    <TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="SMS to send:"
+			android:layout_marginLeft="35dp"
+			android:textColor="@android:color/holo_blue_dark"
+			android:textSize="20dp"
+			android:layout_marginTop="10dp"/>
+
+		<EditText
+			android:layout_width="310dp"
+			android:layout_height="80dp"
+			android:layout_marginLeft="35dp"
+			android:inputType="textMultiLine"
+			android:hint="Write SMS here:"
+			android:id="@+id/tvOutSMSText"/>
+
+		<Button
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:text="Send"
+			android:background="#b3b3b3"
+			android:layout_marginLeft="35dp"
+			android:id="@+id/btnSMSSend"/>
 	
-</RelativeLayout>
+</LinearLayout>
